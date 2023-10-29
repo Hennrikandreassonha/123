@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\GYMAPP.WebApi.props" />
+</Project>

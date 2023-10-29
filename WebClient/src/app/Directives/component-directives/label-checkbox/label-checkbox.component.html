@@ -1,0 +1,5 @@
+<div (click)="IsChecked()" [ngClass]="{'checkedDiv': IsFocused}" (mouseover)="hoverEffect($event)"
+    (mouseleave)="hoverEffectEnd($event)">
+    <label [ngClass]="{'checkedLabel': IsFocused}">{{label}}</label>
+    <img src="../../../../assets/icons/check-mark.png" [ngClass]="{'checked': IsFocused}">
+</div>

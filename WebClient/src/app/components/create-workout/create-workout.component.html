@@ -1,0 +1,61 @@
+<h2>Skapa nytt pass</h2>
+<div id="exercise-form">
+    <input type="text" class="base-text-input" value="Minworkout" [(ngModel)]="WorkoutName">
+
+    <h3>Övningar</h3>
+    <input type="text" placeholder="Sök övning">
+
+    <ul id="choose-exercise">
+        <li id="customize-exercise" class="expandable-container card text-white mb-2 show-pointer"
+            *ngFor="let item of Exercises" (click)="addExercise($event,item);">
+            {{item}}
+
+            <div class="content expanded-content"
+                [@expandAnimation]="ExerciseToCustomize == item ? 'expanded' : 'collapsed'">
+
+                <div>
+                    <label for="weightinput" (click)="stopClickPropagation($event)">Vikt</label>
+                    <input type="number" value="0" id="weightinput" name="weight" (click)="stopClickPropagation($event)"
+                        [(ngModel)]="SetWeight">
+
+                </div>
+                <div>
+                    <label for="reptinput" (click)="stopClickPropagation($event)">Reps</label>
+                    <input type="number" value="0" id="reptinput" name="reps" (click)="stopClickPropagation($event)"
+                        [(ngModel)]="SetReps">
+                </div>
+                <button class="btn btn-primary" (click)="stopClickPropagation($event); addCompleteExercise(item)">Lägg
+                    till övning</button>
+                <button class="btn btn-primary">Lägg till superset</button>
+            </div>
+        </li>
+    </ul>
+
+    <div id="workout-list">
+        <h2>Workout</h2>
+        <ul>
+            <li *ngFor="let item of ExercisesAdded let i = index" class="base-li card text-white mb-2 ">{{item.Name}}
+                <div id="liflex">
+                    <p>
+                        Reps: {{item.Reps}} Weight: {{item.Weight}}
+                    </p>
+                    <img src="../../../assets/icons/trashcan.png" (click)="removeExcersice(i)">
+                </div>
+            </li>
+        </ul>
+        <p></p>
+    </div>
+
+
+    <div>
+        <h3>Tags</h3>
+        <div *ngFor="let item of WorkoutTags let i = index" id="tag-div">
+            <app-label-checkbox [label]="item" (click)="addTag(item)"></app-label-checkbox>
+        </div>
+
+    </div>
+    <p class="errmsg" *ngIf="errMsg">Add one or more exercise</p>
+    <button class="btn btn-primary" (click)="addWorkout()">Lägg till workout</button>
+</div>
+
+<button (click)="testGet()">Test</button>

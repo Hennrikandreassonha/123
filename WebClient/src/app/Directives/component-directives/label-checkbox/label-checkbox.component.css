@@ -1,0 +1,44 @@
+div {
+    display: inline-block;
+    border-radius: 10px;
+    outline: 2px solid var(--swe-color-blue);
+    padding: 0.5rem;
+    background-color: white;
+}
+
+div:hover {
+    outline: 4px solid var(--swe-color-blue);
+    cursor: pointer;
+}
+
+label:hover {
+    cursor: pointer;
+
+}
+label{
+    color:black;
+    
+}
+
+div:hover img {
+    width: 20px;
+}
+
+
+label {
+    margin-right: 0.5rem;
+}
+
+div img {
+    width: 20px;
+    filter: grayscale(100%);
+}
+
+
+.checkedDiv {
+    outline: 4px solid var(--swe-color-blue);
+    background-color: var(--swe-color-blue);
+}
+.checkedLabel{
+    color:white;
+}

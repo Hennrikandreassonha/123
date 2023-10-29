@@ -1,0 +1,85 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* @import "~bootstrap/dist/css/bootstrap.css"; */
+@import "../Styles/solar.bootstrap.css";
+
+body {
+    margin: 0;
+    padding: 0;
+    max-width: 1100px;
+    background-color: #89999b;
+    margin: auto;
+    min-height: 100vh;
+}
+
+html {
+    background-color: #002b36;
+}
+
+html,
+:root {
+    font-family: 'Roboto';
+    --primary-color: #2c3e50;
+    --secondary--gray-color: #7b8a8b;
+    --success-light-green-color: #18a06c;
+
+    --swe-color-yellow: #ffcd00;
+    --swe-color-blue: #004b87;
+}
+
+h2 {
+    font-size: 34px;
+    text-align: center;
+    color: #ffffff;
+}
+
+p,
+h1,
+h2,
+span,
+h3,
+label {
+    color: white;
+    text-align: center;
+}
+
+.center-div {
+    margin: auto;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+.base-li {
+    border: 3px solid var(--swe-color-blue);
+    border-radius: 5px;
+    font-size: 20px;
+    color: white;
+}
+
+.base-text-input {
+    border: 3px solid var(--swe-color-blue);
+    outline: 4px solid transparent;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 20px;
+    outline: 0px;
+}
+
+.base-text-input:focus {
+    outline: 3px solid var(--swe-color-blue);
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.show-pointer {
+    cursor: pointer;
+}
+
+.errmsg {
+    color: red;
+}

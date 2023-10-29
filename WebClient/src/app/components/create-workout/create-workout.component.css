@@ -1,0 +1,66 @@
+#exercise-div,
+#tag-div {
+    display: flex;
+    display: inline-block;
+
+}
+
+#exercise-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+
+#choose-exercise {
+    list-style-type: none;
+    margin: auto;
+}
+
+#choose-exercise li,
+#workout-list li {
+    width: 500px;
+    text-align: center;
+    padding: 5px;
+    margin: 3px;
+    outline: 3px solid transparent;
+    background-color: var(--swe-color-blue);
+    color: black;
+}
+
+#workout-list img {
+    width:28px;
+    height:auto;
+}
+#liflex{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+#liflex p {
+    margin: 0;
+}
+#liflex img{
+    margin-left: 10px;
+}
+#workout-list li:hover {
+    outline: 3px solid var(--swe-color-yellow);
+
+}
+
+#choose-exercise li:hover {
+    outline: 3px solid var(--swe-color-blue);
+}
+
+.content {
+    overflow: hidden;
+}
+
+.remove-icon {
+    width: 30px;
+}
+
+.expanded-content {
+    border-top: 1px solid var(--swe-color-yellow);
+}

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "bsL5UhrDWqFiSJ9FK2W9b9l7IV0H2jSKRgIcP2fMrLY=",
+  "Source": "GYMAPP.WebApi",
+  "BasePath": "_content/GYMAPP.WebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
