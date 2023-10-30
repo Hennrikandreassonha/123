@@ -27,13 +27,14 @@ namespace WebApi.Controllers
             if (user == null)
                 return BadRequest(new { Message = "Fail" });
 
-            return Ok(user);
+            if (await _userRepo.AddUser(user, true))
+            {
+                return Ok(new { Message = "Användare har lagts till" });
+            }
+
+            return BadRequest(new { Message = "Fail" });
+
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View("Error!");
-        }
     }
 }

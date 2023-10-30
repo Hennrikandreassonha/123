@@ -3,14 +3,12 @@ global using GYMAPP.Domain.Exercises;
 global using GYMAPP.Domain.DbObjects;
 global using WebApi.Domain.Exercises;
 global using WebApi.Infrastructure.Repository.WorkoutRepository;
-
+global using WebApi.Infrastructure.Repository.ExerciseRepository;
 
 using System;
 using WebApi.Infrastructure.Repository.Database;
 using Microsoft.EntityFrameworkCore;
-using WebApi.Infrastructure.Repository.WorkoutRepository;
-using WebApi.Infrastructure.Repository.ExerciseRepository;
-
+using WebApi.Infrastructure.UserRepository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +17,8 @@ builder.Services.AddDbContext<GymAppContext>(options => options.UseSqlServer(bui
 
 builder.Services.AddScoped<IWorkoutRepository, WorkoutRepository>();
 builder.Services.AddScoped<IExerciseRepository, ExerciseRepository>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
