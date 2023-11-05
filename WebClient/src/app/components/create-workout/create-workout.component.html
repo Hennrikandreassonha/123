@@ -46,7 +46,6 @@
         <p></p>
     </div>
 
-
     <div>
         <h3>Tags</h3>
         <div *ngFor="let item of WorkoutTags let i = index" id="tag-div">
@@ -54,7 +53,8 @@
         </div>
 
     </div>
-    <p class="errmsg" *ngIf="errMsg">Add one or more exercise</p>
+    <p class="errmsg" *ngIf="errMsg">{{errMsg}}</p>
+    <p>{{responseMsg}}</p>
     <button class="btn btn-primary" (click)="addWorkout()">Lägg till workout</button>
 </div>
 

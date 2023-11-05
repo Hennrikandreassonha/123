@@ -9,12 +9,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LabelCheckboxComponent } from './Directives/component-directives/label-checkbox/label-checkbox.component';
-import {HttpClientModule } from '@angular/common/http'
+import {HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './components/login/login.component';
+import { LogoutComponent } from './components/logout/logout.component';
 
 const appRoutes: Routes = [
   { path: 'Skapa', component: CreateWorkoutComponent },
   { path: '', component: HomeComponent },
-
+  { path: 'Login', component: LoginComponent },
 ];
 
 
@@ -24,7 +26,9 @@ const appRoutes: Routes = [
     NavbarComponent,
     CreateWorkoutComponent,
     HomeComponent,
-    LabelCheckboxComponent
+    LabelCheckboxComponent,
+    LoginComponent,
+    LogoutComponent,
   ],
   imports: [
     BrowserModule,

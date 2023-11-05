@@ -30,7 +30,8 @@ export class CreateWorkoutComponent {
   public SetReps: number = 0;
 
   public AddedTags: string[] = [];
-  public errMsg: boolean = false;
+  public errMsg: string = "";
+  public responseMsg: string = "";
 
   constructor(private _workoutService: WorkoutService) {
   }
@@ -67,7 +68,7 @@ export class CreateWorkoutComponent {
   }
   addWorkout() {
     if (this.ExercisesAdded.length == 0) {
-      this.errMsg = true;
+      this.errMsg = "Lägg till minst en övning"
       return;
     }
 
@@ -76,15 +77,17 @@ export class CreateWorkoutComponent {
     this._workoutService.postWorkout(workoutToAdd).
       subscribe({
         next: (res) => {
-          console.log(res);
+          this.responseMsg = res.message;
+          this.errMsg = "";
         },
         error: (err) => {
-          console.log(err);
+          this.responseMsg = err.message;
+          this.errMsg = "";
         }
       });
   }
   testGet() {
-    
+
     this._workoutService.getWorkout().
       subscribe({
         next: (res) => {

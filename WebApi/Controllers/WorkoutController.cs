@@ -33,7 +33,7 @@ namespace GYMAPP.WebApi.Controllers
             {
                 savedExercises = await _exerciseRepo.AddExercises(workout.Excercises, guidForWorkout, true);
 
-                return Ok(new { Message = $"Pass med {savedExercises} övningar sparat" });
+                return Ok(new { Message = savedExercises > 1 ? $"Pass med {savedExercises} övningar sparat" : $"Pass med {savedExercises} övning sparat"});
             }
 
             return BadRequest("Kunde ej spara pass");

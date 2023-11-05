@@ -10,5 +10,7 @@ namespace WebApi.Infrastructure.UserRepository
     public interface IUserRepository
     {
         Task<bool> AddUser(UserInputModel user, bool saveChanges = false);
+        Task<User?> GetUser(Guid userId);
+
     }
 }

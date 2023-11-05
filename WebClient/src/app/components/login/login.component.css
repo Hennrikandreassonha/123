@@ -1,0 +1,11 @@
+#buttonDiv {
+    display: block;
+    width:200px;
+    color: black !important;
+    margin:auto;
+}
+
+#buttonDiv span {
+    color: black !important;
+
+}

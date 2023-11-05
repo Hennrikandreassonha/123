@@ -28,5 +28,14 @@ namespace WebApi.Infrastructure.UserRepository
 
             return true;
         }
+         public async Task<User?> GetUser(Guid userId)
+        {
+            var user = await _context.Users.FindAsync(userId);
+
+            if(user != null)
+                return user;
+            
+            return null;
+        }
     }
 }
