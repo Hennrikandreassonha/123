@@ -30,11 +30,12 @@ export class LoginComponent {
       google.accounts.id.renderButton(
         // @ts-ignore
         document.getElementById('buttonDiv'),
-        { theme: 'outline', size: 'large', width: '100%' }
+        { theme: 'outline', size: 'large', width: '200px' }
       );
       // @ts-ignore
-      google.accounts.id.prompt()
+      google.accounts.id.prompt((notification: PromptMomentNotification) => {});
     }
+    console.log("tja")
   }
 
   async handleCredentialResponse(response: CredentialResponse) {
