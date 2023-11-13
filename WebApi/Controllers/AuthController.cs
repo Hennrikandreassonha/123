@@ -30,7 +30,7 @@ namespace WebApi.Controllers
             if (user == null)
                 return BadRequest("Username or Password was wrong");
 
-            //Hasha här
+            //Hasha härss
             if(model.UserName == user.UserName && model.Password == user)
 
             return Ok();
