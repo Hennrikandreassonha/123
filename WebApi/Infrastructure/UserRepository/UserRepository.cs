@@ -28,13 +28,22 @@ namespace WebApi.Infrastructure.UserRepository
 
             return true;
         }
-         public async Task<User?> GetUser(Guid userId)
+        public async Task<User?> GetUser(Guid userId)
         {
             var user = await _context.Users.FindAsync(userId);
 
-            if(user != null)
+            if (user != null)
                 return user;
-            
+
+            return null;
+        }
+        public  User? GetUser(string username)
+        {
+            var user = _context.Users.Where(x => x.UserName == username).FirstOrDefault();
+
+            if (user != null)
+                return user;
+
             return null;
         }
     }

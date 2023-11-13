@@ -4,9 +4,11 @@ global using GYMAPP.Domain.DbObjects;
 global using WebApi.Domain.Exercises;
 global using WebApi.Infrastructure.Repository.WorkoutRepository;
 global using WebApi.Infrastructure.Repository.ExerciseRepository;
+global using WebApi.Domain.Auth;
+global using WebApi.Domain.Login;
+global using WebApi.Infrastructure.Repository.Database;
 
 using System;
-using WebApi.Infrastructure.Repository.Database;
 using Microsoft.EntityFrameworkCore;
 using WebApi.Infrastructure.UserRepository;
 

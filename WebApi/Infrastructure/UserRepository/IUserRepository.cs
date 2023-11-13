@@ -11,6 +11,7 @@ namespace WebApi.Infrastructure.UserRepository
     {
         Task<bool> AddUser(UserInputModel user, bool saveChanges = false);
         Task<User?> GetUser(Guid userId);
+        User? GetUser(string username);
 
     }
 }
