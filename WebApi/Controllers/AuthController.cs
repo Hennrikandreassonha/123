@@ -27,8 +27,10 @@ namespace WebApi.Controllers
         public IActionResult Login([FromBody] Login model)
         {
             var user = _userRepo.GetUser(model.UserName);
-            if(user == null)
+            if (user == null)
                 return BadRequest("Username or Password was wrong");
+
+            if(model.UserName == user.UserName && model.Password == user)
 
             return Ok();
         }
